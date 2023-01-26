@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>responsive</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+                <ul id="menu-list">
+                    <li><a href="">Game Controllers</a></li>
+                    <li><a href="">VR Accecories</a></li>
+                    <li><a href="">Media Remotes</a></li>
+                    <li><a href="">Others</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" 
+            onclick="togglemenu()">
+        </div>
+
+        <div class="row">
+            <div class="cols-1">
+                <h2>PS4 V2<br>Dualshock 4</h2>
+                <h3>Wireless Controllers from Playstation 4</h3>
+                <p>(compatible/generatic)</p>
+                <h4>Rp.350.000</h4>
+                <button type="button">Buy Now<img src="images/arrow.png">
+                </button>
+            </div>
+            <div class="cols-2">
+                <img src="images/controller.png" class="controller">
+                <div class="color-box"></div>
+                <div class="add-btn">
+                    <img src="images/add.png">
+                    <p><small>Add to Cart</small></p>
+                </div>
+            </div>
+   
+        </div>
+
+        <div class="social-links">
+            <img src="images/fb.png">
+            <img src="images/tw.png">
+            <img src="images/ig.png">
+        </div>
+
+
+    </div>
+
+    <script>
+
+        var menuList = document.querySelector("#menu-list");
+        var menu = document.querySelector(".menu-icon");
+        var nilai = 0;
+
+        menu.addEventListener("click", function(){
+            if (nilai == 0) {
+                menuList.style.top = "-150px";
+                nilai = 1;
+            }else{
+                menuList.style.top = "75px";
+                nilai = 0;
+            }
+        })
+
+        // menuList.style.maxHeight = "0px";
+
+        // function togglemenu(){
+
+        //     if(menuList.style.maxHeight == "0px")
+        //         {
+        //             menuList.style.maxHeight = "130px";
+        //         }
+        //     else
+        //         {
+        //             menuList.style.maxHeight = "0px";
+        //         }
+        // }
+
+    </script>
+
+</body>
+</html>
